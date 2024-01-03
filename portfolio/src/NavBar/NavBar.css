@@ -9,39 +9,63 @@
     font-family: Rubik Doodle Shadow;
     background-color: #313639;
     margin: 10px;
-    font-size: 4vw;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    font-size:  2.7vw;
+    
 
 
 
     
+    }
+    .noMargin {
+      margin: 0px;
     }
     .font {
         color:white;
         font-size: 2.7vw;
         margin: auto ;
+        width: 100%;
+
     }
     
     .gridMenu {
         color:white;
         grid-area: 1 / 12 / 2 / 13; 
-        border-right: 2px solid white;
+        border: 2px solid white;
+        border-top: 2px solid white;
+    border-bottom: 2px solid white;
+        
 
     }
     .gridNavOne {
         grid-area: 1 / 1 / 2 / 4;
-        margin: auto;
-        width: 100%;
-        height: 100%;
-        border-right: 2px solid white;
+        pad: 10px;
+        border-left: 2px solid white;
+        border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
     }
     .gridNavTwo {
         grid-area: 1 / 4 / 2 / 6;
+        border-left: 2px solid white;
+        border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
     }
-    .gridNavThree { grid-area: 1 / 6 / 2 / 8; }
-    .gridNavFour {grid-area: 1 / 8 / 2 / 10;}
-    .gridNavFive { grid-area: 1 / 10 / 2 / 12; }
+    .gridNavThree { grid-area: 1 / 6 / 2 / 8;
+      border-left: 2px solid white;
+      border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    }
+    .gridNavFour {grid-area: 1 / 8 / 2 / 10;
+      border-left: 2px solid white;
+      border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    }
+    .gridNavFive { grid-area: 1 / 10 / 2 / 12;
+      border-left: 2px solid white;
+      border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    }
 
     .gridMenu:hover {
         background-color: #B0F2B4;

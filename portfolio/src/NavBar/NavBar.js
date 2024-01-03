@@ -5,7 +5,7 @@ import './NavBar.css';
 const Menu = ({ onClose }) => (
     <>
     {/* Add your menu items or components here */}
-    <div className="gridNavOne font" onClick={onClose}>Micah Shumaker</div>
+    <div className={`gridNavOne font`} onClick={onClose}>Micah Shumaker</div>
     <div className="gridNavTwo font" onClick={onClose}>Home</div>
     <div className="gridNavThree font" onClick={onClose}>Projects</div>
     <div className="gridNavFour font" onClick={onClose}>Blog</div>
@@ -29,8 +29,8 @@ function NavBar() {
   };
 
   return (
-    <div className='NavBar'>
-      <div onClick={handleMenuClick} className="gridMenu grid"> <p className="rotate">:)</p></div>
+    <div className={`NavBar ${isMenuOpen ? 'menu-open' : ''}`}>
+      <div onClick={handleMenuClick} className="gridMenu"> <p className='noMargin'>:)</p></div>
       
       {/* Conditionally render the menu based on the state */}
       {isMenuOpen && <Menu onClose={handleMenuItemClick} />}
