@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .sidebar-icon{
+        @apply relative flex items-center justify-center
+        h-14 w-14 mt-4 mb-4 mx-auto
+      text-white bg-gray-500
+        hover:text-pastelGreen
+        rounded-3xl hover:rounded-xl
+        transition-all duration-200 ease-linear;
+    }
+    .sidebar-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-20
+                rounded-md shadow-md
+                bg-slate-800 text-white
+                text-xs font-bold
+                transition-all duration-100 scale-0 origin-left;
+    }
+    .social-icon{
+        @apply relative flex items-center justify-center
+        h-12 w-12 mt-4 mb-4 mx-auto
+      text-white bg-gray-500
+        hover:text-pastelGreen
+        rounded-3xl hover:rounded-xl
+        transition-all duration-200 ease-linear;
+    }
+    .social-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-20
+                rounded-md shadow-md
+                bg-slate-800 text-white
+                text-xs font-bold
+                transition-all duration-100 scale-0 origin-left;
+    }
+}
