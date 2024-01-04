@@ -4,7 +4,7 @@
 import SideBar from "./NavBar/SideBar"
 import TopBar from "./NavBar/TopBar"
 import { ThemeProvider } from "next-themes"
-import HomePage from "./ThemeToggle/Homepage/Homepage"
+import HomePage from "./Homepage/Homepage"
 export default function Home() {
   return (
     <main className=''>
