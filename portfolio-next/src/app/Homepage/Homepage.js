@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 
 export default function HomePage() {
     const sectionRefs = useRef([]);
-
   useEffect(() => {
     const handleWheel = (e, sectionIndex) => {
       const section = sectionRefs.current[sectionIndex];
@@ -50,10 +49,10 @@ export default function HomePage() {
   return (
     <div className="snap-y snap-mandatory overflow-y-scroll h-screen w-screen">
       
-
+      
       <section
         ref={(ref) => (sectionRefs.current[0] = ref)}
-        className="h-screen flex bg-black snap-start pt-16 border-b-2 border-solid border-pastelGreen overflow-x-scroll"
+        className="h-screen flex bg-black snap-start pt-16 border-b-2 border-solid border-pastelGreen overflow-x-scroll contain"
       >
         <div className="flex">
           
