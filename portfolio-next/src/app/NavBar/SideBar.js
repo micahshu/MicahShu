@@ -24,7 +24,7 @@ export default function SideBar(){
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}>
             <div>  
-            <SideBarIcon className={"hover:text-pastelBlue"} text={"Home"} icon={<FaHouseChimney size="28"/>} />
+            <SideBarIcon id="#home"className={"hover:text-pastelBlue"} text={"Home"} icon={<FaHouseChimney size="28"/>} />
             <SideBarIcon className={"hover:text-pastelGreen"} text={"Projects"}icon={<FaLaptopCode  size="28"/>} />
             <SideBarIcon className={"hover:text-pastelYellow"} text={"Blogs"}icon={<FaNewspaper size="28"/>} />
             <SideBarIcon className={"hover:text-pastelPurple"} text={"Contact"}icon={<FaPaperPlane size="28"/>} />
@@ -39,7 +39,7 @@ export default function SideBar(){
         <div className="z-40 w-screen dark:bg-primary h-16 fixed shadow-md m-auto bg-gray-300 transition-all ease-in-out duration-300">
         <div className=' absolute left-6 top-2'>
             
-            <Hamburger toggled={isOpen} toggle={setOpen} color="rgb(107 114 128)" className="p-10"/>
+            <Hamburger toggled={isOpen} toggle={setOpen} color="white" className="p-10"/>
             
         </div>
         <div className='absolute  right-6 top-3'>
@@ -54,10 +54,12 @@ export default function SideBar(){
     )   
 }
 
-const SideBarIcon = ( {icon, text, className } ) => {
+const SideBarIcon = ( {icon, text, className, id } ) => {
     return (
         <div className={`sidebar-icon group ${className}`}>
+            <a href={id}>
             {icon}
+            </a>
             <span className='sidebar-tooltip group-hover:scale-100'>
             {text}
             </span>
