@@ -36,8 +36,8 @@ export default function SideBar(){
             </div>
             
         </div>
-        <div className=" w-screen dark:bg-primary h-16 fixed shadow-md m-auto bg-gray-300 transition-all ease-in-out duration-300">
-        <div className='absolute left-6 top-2'>
+        <div className="z-40 w-screen dark:bg-primary h-16 fixed shadow-md m-auto bg-gray-300 transition-all ease-in-out duration-300">
+        <div className=' absolute left-6 top-2'>
             
             <Hamburger toggled={isOpen} toggle={setOpen} color="white" className="p-10"/>
             
