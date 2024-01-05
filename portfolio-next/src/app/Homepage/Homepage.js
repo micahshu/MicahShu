@@ -1,174 +1,58 @@
-import React, { useRef, useEffect } from 'react';
+
 
 export default function HomePage() {
-    const sectionRefs = useRef([]);
-  useEffect(() => {
-    const handleWheel = (e, sectionIndex) => {
-      const section = sectionRefs.current[sectionIndex];
-      const wheelDelta = e.deltaY || e.detail || e.wheelDelta;
 
-      if (section) {
-        const { scrollLeft, scrollWidth, clientWidth } = section;
-        const maxScrollLeft = scrollWidth - clientWidth;
-
-        if (sectionIndex === 0 && wheelDelta < 0 && scrollLeft === 0) {
-          // Scrolling left at the start of first section, allow default behavior
-          return;
-        }
-
-        if (
-          (wheelDelta < 0 && scrollLeft === 0) || // Scrolling left at the start
-          (wheelDelta > 0 && scrollLeft === maxScrollLeft) // Scrolling right at the end
-        ) {
-          const nextSectionIndex = wheelDelta < 0 ? sectionIndex - 1 : sectionIndex + 1;
-          const targetSection = sectionRefs.current[nextSectionIndex];
-          if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            e.preventDefault();
-          }
-        } else {
-          section.scrollLeft += wheelDelta;
-          e.preventDefault();
-        }
-      }
-    };
-
-    sectionRefs.current.forEach((section, index) => {
-      section.addEventListener('wheel', (e) => handleWheel(e, index), {
-        passive: false,
-      });
-    });
-
-    return () => {
-      sectionRefs.current.forEach((section) => {
-        section.removeEventListener('wheel', handleWheel);
-      });
-    };
-  }, []);
+  const subtext = "<WebDev />"
 
   return (
-    <div className="snap-y snap-mandatory overflow-y-scroll h-screen w-screen">
-      
-      
-      <section
-        ref={(ref) => (sectionRefs.current[0] = ref)}
-        className="h-screen flex bg-black snap-start pt-16 border-b-2 border-solid border-pastelGreen overflow-x-scroll contain"
-      >
-        <div className="flex">
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 1</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 1</h1></div>
-          </div>
+      <div className="z-0 overflow-hidden">
+          <div className="snap-y overflow-x-hidden snap-mandatory overflow-y-scroll h-screen">
 
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 1</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 2</h1></div>
-          </div>
+              <section className="h-screen bg-jetBlack snap-start grid grid-cols-5 grid-rows-4 gap-0">
+                  <div className="col-start-1 col-span-2 row-start-1 row-end-3 ">
+                      <h1 className="text-nowrap font-headerFont ml-32 text-9xl mt-64 "><span className="text-sunYellow">Hi,</span> I'm Micah</h1>
+                  </div>
+                  <div className=" row-start-3 col-span-2 row-span-2 grid grid-cols-1 grid-rows-2 gap-4">
+                      <div>
+                          <h3 className=" font-headerFont ml-32 text-4xl">{subtext}</h3>
+                      </div>
+                      
+                      <div className="row-start-3">
+                          <p className="ml-32 mb-10 font-barlow text-nowrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br /> labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <br /> nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+              
+                  </div>
+                  <div className="col-start-3 col-span-3 row-span-1">
 
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 1</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 3</h1></div>
-          </div>
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 1</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 4</h1></div>
-          </div>
-          
-          
-        </div>
-      </section>
+                  </div>
+                  <div className=" overflow-hidden z-10 my-32 mx-32 h-[50vw] w-[50vw] gap-5 rotate-[225deg] place-items-center row-start-2 col-start-3 row-span-3 col-span-3 grid grid-cols-2 grid-rows-2">
+                      <div className="overflow-hidden z-10 w-full h-full bg-sunYellow rounded-[40px] hover:rounded-2xl
+  transition-all duration-200 ease-linear m-auto"></div>
+  
+                      <div className="overflow-hidden z-10 w-full h-full bg-poppyRed rounded-[40px] hover:rounded-2xl
+  transition-all duration-200 ease-linear col-start-2 row-start-2 m-auto"></div>
+                      <div className="overflow-hidden z-10 w-full h-full bg-skyBlue rounded-[40px] hover:rounded-2xl
+  transition-all duration-200 ease-linear col-start-1 row-start-2 m-auto"></div>
+                  </div>
 
-      <section
-        ref={(ref) => (sectionRefs.current[1] = ref)}
-        className="h-screen flex bg-black snap-start pt-16 border-b-2 border-solid border-pastelGreen overflow-x-scroll"
-      >
-        <div className="flex">
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 2</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 1</h1></div>
-          </div>
 
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 2</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 2</h1></div>
-          </div>
+                  
+              </section>
 
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 2</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 3</h1></div>
-          </div>
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 2</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 4</h1></div>
-          </div>
-          
-          
-        </div>
-      </section>
+              <section className="h-screen flex bg-skyBlue snap-start">
+                  <h1>Second Page</h1>
+              </section>
 
-      <section
-        ref={(ref) => (sectionRefs.current[2] = ref)}
-        className="h-screen flex bg-black snap-start pt-16 border-b-2 border-solid border-pastelGreen overflow-x-scroll"
-      >
-        <div className="flex">
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 3</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 1</h1></div>
-          </div>
+              <section className="h-screen flex bg-pastelPurple snap-start">
+                  <h1>Third Page</h1>
+              </section>
 
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 3</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 2</h1></div>
-          </div>
+              <section className="h-screen flex bg-pastelYellow snap-start">
+                  <h1>Fourth Page</h1>
+              </section>
 
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 3</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 3</h1></div>
-          </div>
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 3</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 4</h1></div>
-          </div>
-          
-          
-        </div>
-      </section>
 
-      <section
-        ref={(ref) => (sectionRefs.current[3] = ref)}
-        className="h-screen flex bg-black snap-start pt-16 border-b-2 border-solid border-pastelGreen overflow-x-scroll"
-      >
-        <div className="flex">
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 4</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 1</h1></div>
           </div>
-
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 4</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 2</h1></div>
-          </div>
-
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 4</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 3</h1></div>
-          </div>
-          
-          <div className="flex-shrink-0 flex-grow-0 w-screen h-full text-center ">
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Section 4</h1></div>
-            <div className=''><h1 className=' font-bold text-9xl w-1/2 m-auto'>Item 4</h1></div>
-          </div>
-          
-          
-        </div>
-      </section>
-    </div>
-  );
+      </div>
+  )
 }
