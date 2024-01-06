@@ -15,11 +15,8 @@ module.exports = {
           sunYellow:"#FFC857",
           poppyRed:"#DB3A34",
           skyBlue:"#3CD2FF",
-          pastelGreen:"#B0F2B4",
-          pastelBlue:"#BAF2E9",
-          pastelPurple:"#BAD7F2",
-          pastelPink:"#F2BAC9",
-          pastelYellow:"#F2E2BA"
+          limeGreen:"#32CD32",
+          
         },
         fontFamily:{
           "bodyFont": ["Barlow" , "sans-serif"],
