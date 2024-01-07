@@ -1,5 +1,5 @@
 import HeroSection from "./Homepage Components/HeroSection"
-import LandScape from "./Homepage Components/landScape"
+import LandScape from "./Homepage Components/LandScape"
 
 
 export default function HomePage() {

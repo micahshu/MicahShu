@@ -26,7 +26,7 @@ export default function SideBar() {
     return (
         <>
         {/* side bar */}
-            <div className={` flex flex-col justify-between fixed top-16 left-0 w-24 h-auto inset-0 bg-gray-300 dark:bg-neutral-600 transition-all ease-in-out duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            <div className={` z-50 flex flex-col justify-between fixed top-16 left-0 w-24 h-auto inset-0 bg-gray-300 dark:bg-neutral-600 transition-all ease-in-out duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                 }`}>
                 <div>
                     <SideBarIcon className={"hover:text-sunYellow"} text={"Home"} icon={<FaHouseChimney size="28" />} />
@@ -53,7 +53,7 @@ export default function SideBar() {
                     <img className="w-10 m-auto
                             rounded-3xl
                             border border-solid border-black dark:border-white
-                             " src='./profilePicture.jpg' />
+                             " src='./profilepic.jpeg' />
                 </div>
             </div>
         </>
