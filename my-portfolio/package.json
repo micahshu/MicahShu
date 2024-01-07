@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-next",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.10",
     "hamburger-react": "^2.5.0",
     "next": "14.0.4",
     "next-themes": "^0.2.1",
@@ -20,6 +19,6 @@
   "devDependencies": {
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^3.3.0"
   }
 }

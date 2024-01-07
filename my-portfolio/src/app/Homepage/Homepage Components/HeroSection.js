@@ -22,9 +22,9 @@ export default function HeroSection(){
 
                   </div>
                   <div className=" overflow-hidden z-10 my-32 mx-32 h-[50vw] w-[50vw] gap-5 rotate-[225deg] place-items-center row-start-2 col-start-3 row-span-3 col-span-3 grid grid-cols-2 grid-rows-2">
-                      <ColoredSquare bgColor={"bg-sunYellow"} />
-                      <ColoredSquare bgColor={"bg-poppyRed"} position={'col-start-2 row-start-2'} />
-                      <ColoredSquare bgColor={"bg-skyBlue"} position={'col-start-1 row-start-2'} />
+                      <ColoredSquare classHeight={"h-full"} classWidth={"w-full"} bgColor={"bg-sunYellow"} text={"Digital Marketing"}/>
+                      <ColoredSquare classHeight={"h-full"} classWidth={"w-full"} size={"w-full h-full"} bgColor={"bg-poppyRed"} grid={'col-start-2 row-start-2'} />
+                      <ColoredSquare classHeight={"h-full"} classWidth={"w-full"} bgColor={"bg-skyBlue"} grid={'col-start-1 row-start-2'} />
                       
                       
                   </div>
