@@ -42,7 +42,7 @@ export default function SideBar() {
 
             </div>
             {/* Top Bar */}
-            <div className="z-40 w-screen dark:bg-neutral-600 h-16 fixed shadow-md m-auto bg-gray-300 transition-all ease-in-out duration-300">
+            <div className="z-50 w-screen dark:bg-neutral-600 h-16 fixed shadow-md m-auto bg-gray-300 transition-all ease-in-out duration-300">
                 <div className=' absolute left-6 top-2'>
 
                     <Hamburger toggled={isOpen} toggle={setOpen} color={hamburgerIcon} className="p-10" />

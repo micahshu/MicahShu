@@ -1,6 +1,8 @@
 import HeroSection from "./Homepage Components/HeroSection"
 import LandScape from "./Homepage Components/LandScape"
-
+import ProjectsPage from "./Homepage Components/ProjectsPage"
+import PersonalProject from "./Homepage Components/PersonalProjects"
+import ContactMe from "./Homepage Components/ContactMe"
 
 export default function HomePage() {
 
@@ -14,13 +16,9 @@ export default function HomePage() {
 
               <LandScape />
 
-              <section className="h-screen flex bg-pastelPurple snap-start">
-                  <h1>Third Page</h1>
-              </section>
+              <ProjectsPage />
 
-              <section className="h-screen flex bg-pastelYellow snap-start">
-                  <h1>Fourth Page</h1>
-              </section>
+              <ContactMe />
 
 
           </div>
