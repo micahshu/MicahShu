@@ -1,8 +1,8 @@
-import HeroSection from "./Homepage Components/HeroSection"
-import LandScape from "./Homepage Components/LandScape"
-import ProjectsPage from "./Homepage Components/ProjectsPage"
-import PersonalProject from "./Homepage Components/PersonalProjects"
-import ContactMe from "./Homepage Components/ContactMe"
+import HeroSection from "./Homepage Sections/HeroSection"
+import LandScape from "./Homepage Sections/LandScape"
+import ProjectsPage from "./Homepage Sections/ProjectsPage"
+import PersonalProject from "./Homepage Sections/PersonalProjects"
+import ContactMe from "./Homepage Sections/ContactMe"
 
 export default function HomePage() {
 
