@@ -1,10 +1,11 @@
 "use client"
 
-import { FaPaperPlane, FaLaptopCode, FaHouseChimney, FaNewspaper, FaGithub, FaLinkedinIn } from 'react-icons/fa6'
+import { FaPaperPlane, FaLaptopCode, FaHouseChimney, FaNewspaper, FaGithub, FaLinkedinIn, FaWordpressSimple } from 'react-icons/fa6'
 import { Squash as Hamburger } from 'hamburger-react'
 import { useState, useEffect } from 'react'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 
 export default function SideBar() {
     const [isOpen, setOpen] = useState(false)
@@ -29,14 +30,14 @@ export default function SideBar() {
             <div className={` z-50 flex flex-col justify-between fixed top-16 left-0 w-24 h-auto inset-0 bg-gray-300 dark:bg-neutral-600 transition-all ease-in-out duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                 }`}>
                 <div>
-                    <SideBarIcon className={"hover:text-sunYellow"} text={"Home"} icon={<FaHouseChimney size="28" />} />
-                    <SideBarIcon className={"hover:text-poppyRed"} text={"Projects"} icon={<FaLaptopCode size="28" />} />
-                    <SideBarIcon className={"hover:text-skyBlue"} text={"Blogs"} icon={<FaNewspaper size="28" />} />
-                    <SideBarIcon className={"hover:text-limeGreen"} text={"Contact"} icon={<FaPaperPlane size="28" />} />
+                    <Link className='scroll-smooth' href="#hero"><SideBarIcon className={"hover:text-sunYellow"} text={"Home"} icon={<FaHouseChimney size="28" />} /></Link>
+                    <Link href="#landscape"><SideBarIcon className={"hover:text-poppyRed"} text={"WordPress"} icon={<FaWordpressSimple size="28" />} /></Link>
+                   <Link href="#projects"> <SideBarIcon className={"hover:text-skyBlue"} text={"Full-Stack"} icon={<FaLaptopCode size="28" />} /></Link>
+                   <Link href="#contact"><SideBarIcon className={"hover:text-limeGreen"} text={"Contact"} icon={<FaPaperPlane size="28" />} /></Link>
                 </div>
                 <div className=''>
-                    <SocialIcon className={"hover:text-jetBlack"} icon={<FaGithub size="22" />} />
-                    <SocialIcon className={"hover:text-skyBlue"} icon={<FaLinkedinIn size="20" />} />
+                    <Link target='_blank' href="https://github.com/micahshu"><SocialIcon className={"hover:text-jetBlack"} icon={<FaGithub size="22" />} /></Link>
+                   <Link target='_blank' href="https://www.linkedin.com/in/micah-shumaker/"> <SocialIcon className={"hover:text-skyBlue"} icon={<FaLinkedinIn size="20" />} /></Link>
 
                 </div>
 
