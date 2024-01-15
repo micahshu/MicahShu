@@ -64,9 +64,9 @@ export default function SideBar() {
 const SideBarIcon = ({ icon, text, className, id }) => {
     return (
         <div className={`sidebar-icon group ${className}`}>
-            <a href={id}>
+            
                 {icon}
-            </a>
+            
             <span className='sidebar-tooltip group-hover:scale-100'>
                 {text}
             </span>
