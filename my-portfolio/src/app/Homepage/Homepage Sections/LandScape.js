@@ -67,6 +67,7 @@ export default function LandScape() {
                 <div className="border border-jetBlack dark:bg-secondary bg-jetBlack  h-[500px] w-full rounded-3xl hover:rounded-xl transition-all ease-in-out duration-300 ">
                     <h2 className="dark:text-jetBlack text-secondary p-10 font-headerFont text-5xl text-right">Mobile Responsive<br />Fast Page Speed</h2>
                     <h2 className='dark:text-jetBlack text-secondary font-headerFont text-center lg:mt-32 mt-44 text-8xl'>WEB APPS</h2>
+                    <p className="dark:text-jetBlack text-secondary text-center">Images and more info coming soon... sorry!</p>
                 </div>             
             </div>
             
