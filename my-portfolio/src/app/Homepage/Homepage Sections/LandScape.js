@@ -2,6 +2,7 @@ import Cloud from "@/app/Components/Cloud";
 import ColoredSquare from "@/app/Components/ColoredSquare";
 import ProjectCard from "@/app/Components/ProjectCard";
 import { FaWordpressSimple } from "react-icons/fa6";
+import Link from 'next/link'
 
 
 export default function LandScape() {
@@ -14,7 +15,7 @@ export default function LandScape() {
             </div>
 
             <div className="col-start-1 row-start-2 lg:row-span-2">
-            <div className={` border-sunYellow bg-sunYellow border lg:mr-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
+                <Link target="_blank" href="https://www.stlprocabinets.com/"><div className={` border-sunYellow bg-sunYellow border lg:mr-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
                     <img className="w-full rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear " src='ProCabinets.png'></img>
                     <div className="flex flex-col justify-center align-text-top">
                     <FaWordpressSimple  className="m-auto mt-2 text-jetBlack" size={24} />
@@ -22,12 +23,12 @@ export default function LandScape() {
                         
                     </div>
                     
-                </div>
+                </div></Link>
                 
             </div>
 
             <div className="col-start-1 lg:col-start-2 row-start-3 lg:row-start-3 lg:row-span-2">
-            <div className={` border-limeGreen bg-limeGreen border lg:ml-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
+            <Link href="https://stlpropertypros.com/" target="_blank"><div className={` border-limeGreen bg-limeGreen border lg:ml-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
                     <img className="w-full rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear " src='PropertyPros.png'></img>
                     <div className="flex flex-col justify-center align-text-top">
                     <FaWordpressSimple  className="m-auto mt-2 text-jetBlack" size={24} />
@@ -35,12 +36,12 @@ export default function LandScape() {
                         
                     </div>
                     
-                </div>  
+                </div> </Link> 
             
             </div>
 
             <div className="col-start-1 row-start-4 lg:row-span-2">
-            <div className={` border-skyBlue bg-skyBlue border lg:mr-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
+            <Link href="https://inlandmarinefl.com/" target="_blank"><div className={` border-skyBlue bg-skyBlue border lg:mr-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
                     <img className="w-full rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear " src='inlandMarine.png'></img>
                     <div className="flex flex-col justify-center align-text-top">
                     <FaWordpressSimple  className="m-auto mt-2 text-jetBlack" size={24} />
@@ -48,11 +49,11 @@ export default function LandScape() {
                         
                     </div>
                     
-                </div>  
+                </div> </Link> 
             </div>
             
             <div className="col-start-1 lg:col-start-2 lg:row-start-5 row-start-5 lg:row-span-2">
-            <div className={` border-poppyRed bg-poppyRed border lg:ml-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
+            <Link href="https://www.concretedreamsohio.com/" target="_blank"><div className={` border-poppyRed bg-poppyRed border lg:ml-10 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear `}>
                     <img className="w-full rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear " src='concreteDreams.png'></img>
                     <div className="flex flex-col justify-center align-text-top">
                     <FaWordpressSimple  className="m-auto mt-2 text-jetBlack" size={24} />
@@ -60,7 +61,7 @@ export default function LandScape() {
                         
                     </div>
                     
-                </div>  
+                </div></Link>  
             </div>
 
             <div className="col-start-1 row-start-6 max-h-64 lg:max-h-12">
